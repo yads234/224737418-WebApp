@@ -6,38 +6,86 @@
     <title>My First Web Page</title>
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="#Home">Home</a>
-        <a href="#About">About Us</a>
-        <a href="#Contact">Contact</a>
-    </nav>
+    <header>
+        <h1>MY FIRST WEBPAGE</h1>
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#About">About Us</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    <header>
 
-    <!-- Inserting Image -->
-    <img src="c:\Users\Acer\Downloads\seoraksan-mountains-is-covered-by-morning-fog-sunrise-seoul-korea.jpg" alt= Hello And Welcome!>
+    <section>
+        <!-- Inserting Image -->
+        <figure>
+            <img src="c:\Users\Acer\Downloads\seoraksan-mountains-is-covered-by-morning-fog-sunrise-seoul-korea.jpg" alt= "Hello And Welcome!" style="width:1500px;height:600px;">
+            <figcaption>Lorem ipsum dolor sit amet, consectetur elit,sed do eusidmod tempor incididunt et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</figcaption>
+        <figure>
+    <section>
 
-    <!-- Form -->
-    <form action="#" method="post">
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="name" required>
+    <article>
+        <!-- Table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>25</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>30</td>
+                    <td>Los Angeles</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Form -->
+        <form action="#" method="post">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="password">Password: </label>
+            <input types="password" id="password" name="password" required >
+            
+            <label>Gender: </label>
+            <input type="radio" id="male" name="gender" value="male" required >
+            
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required >
+            <label for="female">Female</label>
+            
+            <label>
+                <input type="checkbox" id="Accept Terms" name="Accept Terms" required >
+                I accept the Terms and Conditions. 
+            </label>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </article>
 
-        <label for="password">Password: </label>
-        <input types="password" id="password" name="password" required >
+    <footer>
+        <!-- Audio And Video -->
+        <audio controls>
+            <source src="C:\Users\Acer\Downloads\EXO-CBXPaper Cuts MV.mp3" type="adio/mp3">
+            Your browser does not support this file type. 
+        </audio>
 
-        <label>Gender: </label>
-        <input type="radio" id="male" name="gender" value="male" required >
+        <video width="500" height="250" controls>
+            <source src="C:\Users\Acer\Downloads\exo-cbx【paper-cuts】-mv-v1.ytmp4converter.com.mp4" type="video/mp4">
+            Your browser does not support this file type. 
+        </video>
+    </footer>
 
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="female" required >
-        <label for="female">Female</label>
-
-        <label>
-            <input type="checkbox" id="Accept Terms" name="Accept Terms" required >
-            I accept the Terms and Conditions. 
-        </label>
-
-        <button type="submit">Submit</button>
-    </form>
-    
 </body>
 </html>
