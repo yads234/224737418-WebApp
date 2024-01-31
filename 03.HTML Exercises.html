@@ -6,19 +6,82 @@
     <title>My WebPage</title>
     <!-- External Stylesheet Link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 500vw;
+            height: 400vh;
+        }
 
-<!-- Navigation Bar -->
-<nav>
-    <ul>
-        <li><a href="#Home">HOME</a></li>
-        <li><a href="#Access">Accessibility</a></li>
-        <li><a href="#Ext. Resources">External Resources</a></li>
-        <li><a href="#Form Val.">Form Validation</a></li>
-        <li><a href="#Embedded Cont.">Embedded Content</a></li>
-    </ul>
-</nav>
+        .section {
+            width: 500vw;
+            height: 100vh;
+            background-color: azure;
+            font-size: medium;
+            color: black;
+            text-align: left;
+            margin: 10px 5px;
+        }
+
+        .one {
+            background-color: #3897f0;
+        }
+        .two {
+            background-color: aliceblue;
+        }
+        .three {
+            background-color: antiquewhite;
+        }
+        .four {
+            background-color: aqua;
+        }
+        .nav {
+            width: 100vw;
+            height: 20vh;
+            background-color:aliceblue;
+            font-size: x-large;
+            color: white;
+            text-align: center;
+            margin: 20px 8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            place-items: center;
+        }
+        .btn {
+            color: white;
+            background-color:blue;
+            height: 60px;
+            width: 100px;
+            padding: 2px;
+            border: 2px solid black;
+            text-decoration: none;
+        }        
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#Home" class="btn">Home</a>
+        <a href="#Accessibility" class="btn">Accessibility</a>
+        <a href="#External Resources" class="btn">External Resources</a>
+        <a href="#Form Validation" class="btn">Form Validation</a>
+        <a href="#Embedded Content" class="btn">Embedded Content</a>
+    </div>
+    <div class ="Home" id="HOME">
+    </div>
+    <div class ="Accessibility" id="Accessibility">
+    </div>
+    <div class ="External Resources" id="EXTERNAL RESOURCES">
+    </div>
+    <div class ="Form Validation" id="FORM VALIDATION">
+    </div>
+    <div class ="Embedded Content" id="EMBEDDED CONTENT">
+    </div>
+</body>
 
 <!-- Different Sections of WEBPAGE -->
 <!-- HOME -->
@@ -41,27 +104,27 @@
 <!-- EXTERNAL RESOURCES -->
 <section id="external resources">
     <h2>External Resources</h2>
-    <script src="https://www.dwsamplefiles.com/?dl_id=244"></script>
+    <script src="script.js"></script>
 </section>
 
 <!-- FORM VALIDATION -->
 <section id="form validation">
-    <h2>HTML Form Validation</h2>
+    <h2>Form Validation</h2>
     <form action="#" method="post">
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required> 
-        <br>
+        <input type="text" id="email" name="email" pattern="[a-zA-ZO-9.%+-]+@[a-zA-ZO-9.-]+\.[a-zA-Z]{2,}" title="Enter a valid email address" placeholder="Enter your email" required> 
+        <br><br>
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-        <br>
+        <input type="number" id="age" name="age" pattern="[1-9][0-9]*" title="Enter a valid age" placeholder="Enter your age" required>
+        <br><br>
         <label for="birthdate">Birthdate:</label>
-        <input type="date" id="birthdate" name="birthdate" required> 
+        <input type="date" id="birthdate" name="birthdate" pattern="\d{4}-\d{2}-\d{2}" title="Enter a valid birthdate (YYYY-MM-DD)" placeholder="YYYY-MM-DD" required> 
     </form>
 </section>
 
 <!-- IFRAMES AND EMBEDDED CONTENT -->
 <section>
-    <h2>IFrames and Embedded Content</h2>
+    <h2>Embedded Content</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122474.13466357751!2d120.51540194316254!3d16.408733943303933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3391a1426d6ff0fd%3A0xfe9ac4d43fc84157!2sUniversity%20of%20the%20Cordilleras!5e0!3m2!1sen!2sph!4v1706692324835!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <br>
