@@ -4,7 +4,10 @@ body {
   color: #4d4e53;
   background-color: #ffffff;
   font-family: 'Open Sans', Arial, sans-serif;
+  font-size: large;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 #navbar {
@@ -16,13 +19,18 @@ body {
   height: 100%;
   border-right: solid;
   border-color: rgba(0, 22, 22, 0.4);
+  background-color: plum;
+  transition: width 0.3s ease;
+}
+#navbar:hover {
+  width:320px;
 }
 
 header {
   color: black;
   margin: 10px;
   text-align: center;
-  font-size: 1.8em;
+  font-size: ;
   font-weight: thin;
 }
 
@@ -52,6 +60,10 @@ header {
   color: #4d4e53;
   text-decoration: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#navbar:hover {
+  background-color: purple;
 }
 
 #main-doc {
@@ -59,16 +71,26 @@ header {
   margin-left: 310px;
   padding: 20px;
   margin-bottom: 110px;
+  transition: margin-left 0.3s ease;
+}
+section {
+  margin-bottom: 40px;
 }
 
 section article {
-  color: #4d4e53;
-  margin: 15px;
-  font-size: 0.96em;
+  background-color: white;
+  margin: 15px 15px 0px 15px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0,1);
+}
+section article:hover {
+  transform: translateY(-5px);
 }
 
-section li {
-  margin: 15px 0px 0px 20px;
+section header {
+  font-size: 1.4em;
+  margin-bottom: 10px;
 }
 
 code {
@@ -78,11 +100,15 @@ code {
   position: relative;
   word-break: normal;
   word-wrap: normal;
-  line-height: 2;
+  line-height: 1.5;
   background-color: #f7f7f7;
   padding: 15px;
   margin: 10px;
   border-radius: 5px;
+  transition: background-color 0.3s ease
+}
+code:hover {
+  background-color: aliceblue;
 }
 
 @media only screen and (max-width: 815px) {

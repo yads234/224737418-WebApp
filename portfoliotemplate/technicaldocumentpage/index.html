@@ -5,7 +5,8 @@
   </head>
   <body>
     <nav id="navbar">
-      <header>JS Documentation</header>
+      <header>HTML And CSS Documentation</header>
+      <button id="nav-toggle">Menu</button>
       <ul>
         <li><a class="nav-link" href="#Introduction">Introduction</a></li>
         <li>
@@ -14,15 +15,15 @@
           >
         </li>
         <li>
-          <a class="nav-link" href="#JavaScript_and_Java"
-            >JavaScript and Java</a
+          <a class="nav-link" href="#HTML"
+            >HTML and CSS</a
           >
         </li>
-        <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
-        <li><a class="nav-link" href="#Variables">Variables</a></li>
+        <li><a class="nav-link" href="#Client-Side vs. Server-side Development">Client-Side vs. Server-side Developmen</a></li>
+        <li><a class="nav-link" href="#Git">Learning About Git</a></li>
         <li>
-          <a class="nav-link" href="#Declaring_variables"
-            >Declaring variables</a
+          <a class="nav-link" href="#HTML Elements"
+            >CHAPTER 1: HTML Elements</a
           >
         </li>
         <li><a class="nav-link" href="#Variable_scope">Variable scope</a></li>
@@ -50,11 +51,16 @@
         <header>Introduction</header>
         <article>
           <p>
-            JavaScript is a cross-platform, object-oriented scripting language.
-            It is a small and lightweight language. Inside a host environment
-            (for example, a web browser), JavaScript can be connected to the
-            objects of its environment to provide programmatic control over
-            them.
+            HTML5, is the latest version of HTML, structures web content using tags like header,nav, 
+              and footer. It introduces new features and improved semantics for creating web pages. CSS (Cascading Style Sheets)
+              styles HTML elements, controlling their visual presentation with properties like color, font, and lay-out. CSS can be applied within HTML tags into 
+              three different ways.
+              <ul>
+                <li>1. Internal: Tags placed within head or body, including CSS and JavaScrip.</li>
+                <li>2. External: Tags stored in separate .html files, linked to main document.</li>
+                <li>3. Inline: Tags used directly within content, affecting specific elements.</li>
+              </ul>
+              Together HTML5 amd CSS form the backbone of Web Developmen, allowing us developers to create visually appealing and semanticall structured websites. 
           </p>
 
           <p>
@@ -446,14 +452,37 @@
             <li>
               All the documentation in this page is taken from
               <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+                href="https://primusr.notion.site/Web-Application-Development-c213cf6dbd834f6f8bcc2d02746209db"
                 target="_blank"
-                >MDN</a
+                >Web Application Development</a
               >
             </li>
           </ul>
         </article>
       </section>
     </main>
+    <script>
+      // Script for navigation toggle button
+      const navToggle = document.getElementById('nav-toggle');
+      const navbar = document.getElementById('navbar');
+      navToggle.addEventListener('click', function() {
+          navbar.classList.toggle('show');
+      });
+
+      // Script for smooth scrolling
+      document.querySelectorAll('a.nav-link').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+              e.preventDefault();
+
+              const targetId = this.getAttribute('href').substring(1);
+              const targetSection = document.getElementById(targetId);
+
+              window.scrollTo({
+                  top: targetSection.offsetTop - navbar.offsetHeight,
+                  behavior: 'smooth'
+              });
+          });
+      });
+  </script>
   </body>
 </html>
